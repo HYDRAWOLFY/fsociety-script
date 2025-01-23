@@ -11,26 +11,20 @@ credentials = {
 entry = False
 
 def login():
-    defined = False
     usr_name = input("Enter Username: ")
     pswrd = getpass.getpass("Enter Password: ")
     if usr_name in credentials and credentials[usr_name] == pswrd:
-        defined = True
         print()
         print(f"Welcome {usr_name}")
         time.sleep(1.00)
-    else:
-        print("Not a valid Username and Password")
-
-    if defined:
         return True
     else:
+        print("Not a valid Username and Password")
         return False
 
 entry = login()
 
 if entry:
-    #this loading_bar is made by chatgpt so...i dont get credit for it.
     def loading_bar(total, prefix='Doing Job,Please wait.', suffix='Complete', length=50, fill='█'):
       for i in range(total + 1):
           percent = ("{0:.1f}").format(100 * (i / float(total)))
