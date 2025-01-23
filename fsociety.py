@@ -10,7 +10,7 @@ credentials = {
 
 entry = False
 
-def login():
+def login(): #This does the Login job for the script.
     usr_name = input("Enter Username: ")
     pswrd = getpass.getpass("Enter Password: ")
     if usr_name in credentials and credentials[usr_name] == pswrd:
@@ -22,9 +22,9 @@ def login():
         print("Not a valid Username and Password")
         return False
 
-entry = login()
+entry = login() 
 
-if entry:
+if entry: #This says. if entry == True then let it happen otherwise don't.
     def loading_bar(total, prefix='Doing Job,Please wait.', suffix='Complete', length=50, fill='█'):
       for i in range(total + 1):
           percent = ("{0:.1f}").format(100 * (i / float(total)))
