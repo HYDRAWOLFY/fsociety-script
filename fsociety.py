@@ -3,7 +3,7 @@ import getpass
 import time 
 
 credentials = {
-    "mr_robot":"i am a bug",
+    "mr robot":"i am a bug",
     "darlene":"let go",
     "eliot":"i am lonely",
 }
